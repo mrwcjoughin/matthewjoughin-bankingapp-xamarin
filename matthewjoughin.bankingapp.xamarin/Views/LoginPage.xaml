@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:vm="clr-namespace:matthewjoughin.bankingapp.xamarin.ViewModels;"
+    xmlns:helpers="clr-namespace:matthewjoughin.bankingapp.xamarin.Helpers;"
+    xmlns:xfc="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Core"
+    x:Class="matthewjoughin.bankingapp.xamarin.LoginPage" 
+    Title="{Binding Title}">
+	<ContentPage.BindingContext>
+		<vm:LoginViewModel />
+	</ContentPage.BindingContext>
+        <ScrollView HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+            <Grid HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                RowSpacing="0" ColumnSpacing="0"
+                >
+                <Grid.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS, macOS" Value="{StaticResource standardBackgroundColoriOS}"/>
+                        <On Platform="Android" Value="{StaticResource standardBackgroundColorAndroid}"/>
+                        <On Platform="UWP" Value="{StaticResource standardBackgroundColorUWP}"/>
+                    </OnPlatform>
+                </Grid.BackgroundColor>
+                <Grid.RowDefinitions>
+                    <!--Blank Space-->
+                    <RowDefinition Height="*">
+                    </RowDefinition>
+                    
+                    <!--Logo-->
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="xfc:GridLength">
+                                <On Platform="iOS, macOS" Value="200"/>
+                                <On Platform="Android" Value="200"/>
+                                <On Platform="UWP" Value="Auto"/>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+
+                    <!--Username-->
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="xfc:GridLength">
+                                <On Platform="iOS, macOS" Value="{StaticResource entryGridLengthHeightiOS}"/>
+                                <On Platform="Android" Value="{StaticResource entryGridLengthHeightAndroid}"/>
+                                <On Platform="UWP" Value="{StaticResource entryGridLengthHeightUWP}"/>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+
+                    <!--Password-->
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="xfc:GridLength">
+                                <On Platform="iOS, macOS" Value="{StaticResource entryGridLengthHeightiOS}"/>
+                                <On Platform="Android" Value="{StaticResource entryGridLengthHeightAndroid}"/>
+                                <On Platform="UWP" Value="{StaticResource entryGridLengthHeightUWP}"/>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+
+                    <!--Blank Space-->
+                    <RowDefinition Height="*"/>
+                    
+                    <!--Login Button-->
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="xfc:GridLength">
+                                <On Platform="iOS, macOS" Value="{StaticResource buttonGridLengthHeightiOS}"/>
+                                <On Platform="Android" Value="{StaticResource buttonGridLengthHeightAndroid}"/>
+                                <On Platform="UWP" Value="{StaticResource buttonGridLengthHeightUWP}"/>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+
+                    <!--Errors-->
+                    <RowDefinition>
+                        <RowDefinition.Height>
+                            <OnPlatform x:TypeArguments="xfc:GridLength">
+                                <On Platform="iOS, macOS" Value="{StaticResource buttonGridLengthHeightiOS}"/>
+                                <On Platform="Android" Value="{StaticResource buttonGridLengthHeightAndroid}"/>
+                                <On Platform="UWP" Value="{StaticResource buttonGridLengthHeightUWP}"/>
+                            </OnPlatform>
+                        </RowDefinition.Height>
+                    </RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <!--Blank Space-->
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnPlatform x:TypeArguments="xfc:GridLength">
+                                <On Platform="iOS, macOS" Value="*"/>
+                                <On Platform="Android" Value="20"/>
+                                <On Platform="UWP" Value="*"/>
+                            </OnPlatform>
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+
+                    <!--Content Column-->
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnPlatform x:TypeArguments="xfc:GridLength">
+                                <On Platform="iOS, macOS" Value="400"/>
+                                <On Platform="Android" Value="Auto"/>
+                                <On Platform="UWP" Value="400"/>
+                            </OnPlatform>
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+
+                    <!--Blank Space-->
+                    <ColumnDefinition>
+                        <ColumnDefinition.Width>
+                            <OnPlatform x:TypeArguments="xfc:GridLength">
+                                <On Platform="iOS, macOS" Value="*"/>
+                                <On Platform="Android" Value="20"/>
+                                <On Platform="UWP" Value="*"/>
+                            </OnPlatform>
+                        </ColumnDefinition.Width>
+                    </ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!--Blank Space-->
+                <ContentView Grid.Row="0" Grid.Column="0"
+                    Grid.RowSpan="7"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent">
+                </ContentView>
+
+                <!--Blank Space-->
+                <ContentView Grid.Row="0" Grid.Column="2"
+                    Grid.RowSpan="7"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent">
+                </ContentView>
+
+                <!--Blank Space-->
+                <ContentView Grid.Row="0" Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent">
+                </ContentView>
+
+                <!--Logo-->
+                <ContentView Grid.Row="1" Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent">
+                    <ContentView.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS, macOS" Value="0, 0, 0, 0"/>
+                            <On Platform="Android" Value="0, 0, 0, 0"/>
+                            <On Platform="UWP" Value="0, 0, 0, 0"/>
+                        </OnPlatform>
+                    </ContentView.Padding>
+                    <Image HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="Transparent"
+                        Aspect="AspectFit">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="xfc:ImageSource">
+                                <On Platform="iOS, macOS" Value="{StaticResource logoFileImageSource_iOS}"/>
+                                <On Platform="Android" Value="{StaticResource logoFileImageSource_Android}"/>
+                                <On Platform="UWP" Value="{StaticResource logoFileImageSource_UWP}"/>
+                            </OnPlatform>
+                        </Image.Source>
+                </Image>
+                </ContentView>
+
+                <!--Username-->
+                <ContentView Grid.Row="2" Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent">
+                    <ContentView.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS, macOS" Value="0, 0, 0, 0"/>
+                            <On Platform="Android" Value="0, 0, 0, 0"/>
+                            <On Platform="UWP" Value="0, 0, 0, 0"/>
+                        </OnPlatform>
+                    </ContentView.Padding>
+                    <Entry
+                        BackgroundColor="Transparent"
+                        Placeholder="Email Address"
+                        PlaceholderColor="Gray"
+                        Text="{Binding EmailAddress}"
+                        >
+                    </Entry>
+                </ContentView>
+
+                <!--Password-->
+                <ContentView Grid.Row="3" Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent">
+                    <ContentView.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS, macOS" Value="0, 0, 0, 0"/>
+                            <On Platform="Android" Value="0, 0, 0, 0"/>
+                            <On Platform="UWP" Value="0, 0, 0, 0"/>
+                        </OnPlatform>
+                    </ContentView.Padding>
+                    <Entry
+                        BackgroundColor="Transparent"
+                        IsPassword="true"
+                        Placeholder="Password"
+                        PlaceholderColor="Gray"
+                        Text="{Binding Password}"
+                        >
+                    </Entry>
+                </ContentView>
+
+                <!--Login Button-->
+                <ContentView Grid.Row="5" Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <ContentView.BackgroundColor>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="iOS, macOS" Value="{StaticResource standardButtonBackgroundColoriOS}"/>
+                            <On Platform="Android" Value="{StaticResource standardButtonBackgroundColorAndroid}"/>
+                            <On Platform="UWP" Value="{StaticResource standardButtonBackgroundColorUWP}"/>
+                        </OnPlatform>
+                    </ContentView.BackgroundColor>
+                    <ContentView.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS, macOS" Value="0, 0, 0, 0"/>
+                            <On Platform="Android" Value="0, 0, 0, 0"/>
+                            <On Platform="UWP" Value="0, 0, 0, 0"/>
+                        </OnPlatform>
+                    </ContentView.Padding>
+                    <ContentView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LoginCommand}"/>
+                    </ContentView.GestureRecognizers>
+                    <Label HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Text="Login">
+                        <Label.BackgroundColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="iOS, macOS" Value="{StaticResource standardButtonBackgroundColoriOS}"/>
+                                <On Platform="Android" Value="{StaticResource standardButtonBackgroundColorAndroid}"/>
+                                <On Platform="UWP" Value="{StaticResource standardButtonBackgroundColorUWP}"/>
+                            </OnPlatform>
+                        </Label.BackgroundColor>
+                        <Label.TextColor>
+                            <OnPlatform x:TypeArguments="Color">
+                                <On Platform="iOS, macOS" Value="{StaticResource standardButtonForegroundColoriOS}"/>
+                                <On Platform="Android" Value="{StaticResource standardButtonForegroundColorAndroid}"/>
+                                <On Platform="UWP" Value="{StaticResource standardButtonForegroundColorUWP}"/>
+                            </OnPlatform>
+                        </Label.TextColor>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </ContentView>
+
+                <!--Errors-->
+                <ContentView Grid.Row="6" Grid.Column="1"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent">
+                    <ContentView.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS, macOS" Value="0, 0, 0, 0"/>
+                            <On Platform="Android" Value="0, 0, 0, 0"/>
+                            <On Platform="UWP" Value="0, 0, 0, 0"/>
+                        </OnPlatform>
+                    </ContentView.Padding>
+                    <Label HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="Transparent"
+                        Text="{Binding Errors}"
+                        TextColor="Maroon">
+                    </Label>
+                </ContentView>
+            </Grid>
+        </ScrollView>
+</ContentPage>

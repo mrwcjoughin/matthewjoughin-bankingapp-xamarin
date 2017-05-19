@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="matthewjoughin.bankingapp.xamarin.BeneficiaryDetailPage" Title="{Binding Title}">
+	<StackLayout Spacing="5" Padding="5">
+		<Label Text="Name" FontSize="Small" />
+        <Label Text="{Binding Beneficiary.Name}" TextColor="Gray" FontSize="Small" />
+        
+		<Label Text="Bank" FontSize="Small" />
+        <Label Text="{Binding Beneficiary.Bank}" TextColor="Gray" FontSize="Small" />
+        
+        <Label Text="Account Type" FontSize="Small" />
+        <Label Text="{Binding Beneficiary.AccountType}" TextColor="Gray" FontSize="Small" />
+        
+        <Label Text="Account No" FontSize="Small" />
+        <Label Text="{Binding Beneficiary.AccountNo}" TextColor="Gray" FontSize="Small" />
+	</StackLayout>
+</ContentPage>

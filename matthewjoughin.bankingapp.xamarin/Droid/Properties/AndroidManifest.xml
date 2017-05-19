@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="tech.matthewjoughin.bankingapp.xamarin.idat_aegis_xamarin">
+	<uses-sdk android:minSdkVersion="15" />
+	<application android:label="matthewjoughin.bankingapp.xamarin">
+	</application>
+</manifest>

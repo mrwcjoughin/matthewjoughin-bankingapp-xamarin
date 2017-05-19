@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Core"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="matthewjoughin.bankingapp.xamarin.StylesPage">
+    <Application.Resources>
+		<ResourceDictionary>
+            <Color x:Key="standardBackgroundColoriOS">
+				White
+            </Color>
+            <Color x:Key="standardBackgroundColorAndroid">
+				White
+            </Color>
+            <Color x:Key="standardBackgroundColorUWP">
+                White
+            </Color>
+
+            <Color x:Key="secondaryBackgroundColoriOS">
+				White
+            </Color>
+            <Color x:Key="secondaryBackgroundColorAndroid">
+				White
+            </Color>
+            <Color x:Key="secondaryBackgroundColorUWP">
+				White
+            </Color>
+
+            <Color x:Key="standardForegroundColoriOS">
+				Black
+            </Color>
+            <Color x:Key="standardForegroundColorAndroid">
+				Black
+            </Color>
+            <Color x:Key="standardForegroundColorUWP">
+				Black
+            </Color>
+
+            <Color x:Key="secondaryForegroundColoriOS">
+				Black
+            </Color>
+            <Color x:Key="secondaryForegroundColorAndroid">
+				Black
+            </Color>
+            <Color x:Key="secondaryForegroundColorUWP">
+				Black
+            </Color>
+
+            <Color x:Key="alternateForegroundColoriOS">
+				Gray
+            </Color>
+            <Color x:Key="alternateForegroundColorAndroid">
+				Gray
+            </Color>
+            <Color x:Key="alternateForegroundColorUWP">
+				Gray
+            </Color>
+
+			<Color x:Key="standardButtonForegroundColoriOS">
+				White
+            </Color>
+            <Color x:Key="standardButtonForegroundColorAndroid">
+				White
+            </Color>
+            <Color x:Key="standardButtonForegroundColorUWP">
+				White
+            </Color>
+
+			<Color x:Key="standardButtonBackgroundColoriOS">
+				#00aeef
+            </Color>
+            <Color x:Key="standardButtonBackgroundColorAndroid">
+				#00aeef
+            </Color>
+            <Color x:Key="standardButtonBackgroundColorUWP">
+				#00aeef
+            </Color>
+
+			<Color x:Key="alternativeButtonForegroundColoriOS">
+				#00aeef
+            </Color>
+            <Color x:Key="alternativeButtonForegroundColorAndroid">
+				#00aeef
+            </Color>
+            <Color x:Key="alternativeButtonForegroundColorUWP">
+				#00aeef
+            </Color>
+
+			<Color x:Key="standardEntryBorderColoriOS">
+				#00aeef
+            </Color>
+            <Color x:Key="standardEntryBorderColorAndroid">
+				#00aeef
+            </Color>
+            <Color x:Key="standardEntryBorderColorUWP">
+				#00aeef
+            </Color>
+			
+            <Color x:Key="pageBackgroundColoriOS">
+				#f6f6fa
+            </Color>
+            <Color x:Key="pageBackgroundColorAndroid">
+				#f6f6fa
+            </Color>
+            <Color x:Key="pageBackgroundColorUWP">
+				#f6f6fa
+            </Color>
+
+			<Color x:Key="navigationBarBackgroundColoriOS">
+				#f6f6fa
+            </Color>
+            <Color x:Key="navigationBarBackgroundColorAndroid">
+				#f6f6fa
+            </Color>
+            <Color x:Key="navigationBarBackgroundColorUWP">
+				#f6f6fa
+            </Color>
+            
+            <Color x:Key="searchBarBackgroundColoriOS">
+				#cfd0d4
+            </Color>
+            <Color x:Key="searchBarBackgroundColorAndroid">
+				#cfd0d4
+            </Color>
+            <Color x:Key="searchBarBackgroundColorUWP">
+				#cfd0d4
+            </Color>
+
+            <Color x:Key="newLoopMessageBackgroundColoriOS">
+				#f6f6fa
+            </Color>
+            <Color x:Key="newLoopMessageBackgroundColorAndroid">
+				#f6f6fa
+            </Color>
+            <Color x:Key="newLoopMessageBackgroundColorUWP">
+				#f6f6fa
+            </Color>
+
+            <Color x:Key="navigationBarForegroundColoriOS">
+				Black
+            </Color>
+            <Color x:Key="navigationBarForegroundColorAndroid">
+				Black
+            </Color>
+            <Color x:Key="navigationBarForegroundColorUWP">
+				Black
+            </Color>
+
+            <Color x:Key="activityIndicatorForegroundColoriOS">
+				Gray
+            </Color>
+            <Color x:Key="activityIndicatorForegroundColorAndroid">
+				Gray
+            </Color>
+            <Color x:Key="activityIndicatorForegroundColorUWP">
+				Gray
+            </Color>
+
+            <Color x:Key="menuForegroundColoriOS">
+				Gray
+            </Color>
+            <Color x:Key="menuForegroundColorAndroid">
+				Gray
+            </Color>
+            <Color x:Key="menuForegroundColorUWP">
+				Gray
+            </Color>
+
+            <Color x:Key="menuSeparatorColoriOS">
+				White
+            </Color>
+            <Color x:Key="menuSeparatorColorAndroid">
+				White
+            </Color>
+            <Color x:Key="menuSeparatorColorUWP">
+				White
+            </Color>
+
+            <Color x:Key="separatorColoriOS">
+				Gray
+            </Color>
+            <Color x:Key="separatorColorAndroid">
+				Gray
+            </Color>
+            <Color x:Key="separatorColorUWP">
+				Gray
+            </Color>
+
+            <Color x:Key="escalateBackgroundColoriOS">
+				White
+            </Color>
+            <Color x:Key="escalateBackgroundColorAndroid">
+				White
+            </Color>
+            <Color x:Key="escalateBackgroundColorUWP">
+				White
+            </Color>
+
+            <Color x:Key="escalateForegroundColoriOS">
+				Red
+            </Color>
+            <Color x:Key="escalateForegroundColorAndroid">
+				Red
+            </Color>
+            <Color x:Key="escalateForegroundColorUWP">
+				Red
+            </Color>
+
+            <GridLength x:Key="navigationBarGridLengthHeightiOS">
+	            40
+            </GridLength>
+            <GridLength x:Key="navigationBarGridLengthHeightAndroid">
+	            40
+            </GridLength>
+            <GridLength x:Key="navigationBarGridLengthHeightUWP">
+	            70
+            </GridLength>
+
+            <GridLength x:Key="searchBarGridLengthHeightiOS">
+	            40
+            </GridLength>
+            <GridLength x:Key="searchBarGridLengthHeightAndroid">
+	            40
+            </GridLength>
+            <GridLength x:Key="searchBarGridLengthHeightUWP">
+	            70
+            </GridLength>
+
+            <GridLength x:Key="newLoopMessageGridLengthHeightiOS">
+	            30
+            </GridLength>
+            <GridLength x:Key="newLoopMessageGridLengthHeightAndroid">
+	            30
+            </GridLength>
+            <GridLength x:Key="newLoopMessageGridLengthHeightUWP">
+	            30
+            </GridLength>
+
+            <GridLength x:Key="newLoopMessagePictureGridLengthHeightiOS">
+	            30
+            </GridLength>
+            <GridLength x:Key="newLoopMessagePictureGridLengthHeightAndroid">
+	            30
+            </GridLength>
+            <GridLength x:Key="newLoopMessagePictureGridLengthHeightUWP">
+	            30
+            </GridLength>
+
+            <x:Int32 x:Key="singleGridRowHeightiOS">
+	            51
+            </x:Int32>
+            <x:Int32 x:Key="singleGridRowHeightAndroid">
+	            51
+            </x:Int32>
+            <x:Int32 x:Key="singleGridRowHeightUWP">
+	            51
+            </x:Int32>
+            
+            <GridLength x:Key="singleGridRowGridLengthHeightiOS">
+	            50
+            </GridLength>
+            <GridLength x:Key="singleGridRowGridLengthHeightAndroid">
+	            50
+            </GridLength>
+            <GridLength x:Key="singleGridRowGridLengthHeightUWP">
+	            50
+            </GridLength>
+
+            <GridLength x:Key="separatorLineHeightiOS">
+	            1
+            </GridLength>
+            <GridLength x:Key="separatorLineHeightAndroid">
+	            1
+            </GridLength>
+            <GridLength x:Key="separatorLineHeightUWP">
+	            2
+            </GridLength>
+
+			<GridLength x:Key="rightArrowListItemGridLengthWidthiOS">
+	            20
+            </GridLength>
+            <GridLength x:Key="rightArrowListItemGridLengthWidthAndroid">
+	            20
+            </GridLength>
+            <GridLength x:Key="rightArrowListItemGridLengthWidthUWP">
+	            30
+            </GridLength>
+
+            <GridLength x:Key="dataRowGridLengthHeightiOS">
+	            30
+            </GridLength>
+            <GridLength x:Key="dataRowGridLengthHeightAndroid">
+	            30
+            </GridLength>
+            <GridLength x:Key="dataRowGridLengthHeightUWP">
+	            40
+            </GridLength>
+
+			<GridLength x:Key="entryGridLengthHeightiOS">
+	            30
+            </GridLength>
+            <GridLength x:Key="entryGridLengthHeightAndroid">
+	            60
+            </GridLength>
+            <GridLength x:Key="entryGridLengthHeightUWP">
+	            Auto
+            </GridLength>
+
+			<GridLength x:Key="buttonGridLengthHeightiOS">
+	            50
+            </GridLength>
+            <GridLength x:Key="buttonGridLengthHeightAndroid">
+	            50
+            </GridLength>
+            <GridLength x:Key="buttonGridLengthHeightUWP">
+	            60
+            </GridLength>
+
+            <Thickness x:Key="zeroPaddingThickness">0, 0, 0, 0</Thickness>
+
+            <Thickness x:Key="standardViewPaddingThicknessiOS">12, 0, 12, 0</Thickness>
+            <Thickness x:Key="standardViewPaddingThicknessAndroid">12, 0, 12, 0</Thickness>
+            <Thickness x:Key="standardViewPaddingThicknessUWP">0, 0, 0, 0</Thickness>
+
+			<Thickness x:Key="allRoundViewPaddingThicknessiOS">12, 12, 12, 12</Thickness>
+            <Thickness x:Key="allRoundViewPaddingThicknessAndroid">12, 12, 12, 12</Thickness>
+            <Thickness x:Key="allRoundViewPaddingThicknessUWP">0, 12, 0, 12</Thickness>
+			
+            <FileImageSource x:Key="logoFileImageSource_iOS"
+            	File="SuperBank_Logo.png"
+            	/>
+			<FileImageSource x:Key="logoFileImageSource_Android"
+            	File="SuperBank_Logo.png"
+            	/>
+			<FileImageSource x:Key="logoFileImageSource_UWP"
+            	File="Assets/SuperBank_Logo.png"
+            	/>
+
+			<FileImageSource x:Key="avatarFileImageSource_iOS"
+            	File="avatar.png"
+            	/>
+			<FileImageSource x:Key="avatarFileImageSource_Android"
+            	File="avatar.png"
+            	/>
+			<FileImageSource x:Key="avatarFileImageSource_UWP"
+            	File="Assets/avatar.png"
+            	/>
+
+            <FileImageSource x:Key="backFileImageSource_iOS"
+            	File="Back.png"
+            	/>
+			<FileImageSource x:Key="backFileImageSource_Android"
+            	File="Back.png"
+            	/>
+			<FileImageSource x:Key="backFileImageSource_UWP"
+            	File="Assets/Back.png"
+            	/>
+
+            <FileImageSource x:Key="hamburgerFileImageSource_iOS"
+            	File="Hamburger.png"
+            	/>
+			<FileImageSource x:Key="hamburgerFileImageSource_Android"
+            	File="Hamburger.png"
+            	/>
+			<FileImageSource x:Key="hamburgerFileImageSource_UWP"
+            	File="Assets/Hamburger.png"
+            	/>
+
+            <FileImageSource x:Key="rightArrowFileImageSource_iOS"
+            	File="RightArrow.png"
+            	/>
+			<FileImageSource x:Key="rightArrowFileImageSource_Android"
+            	File="RightArrow.png"
+            	/>
+			<FileImageSource x:Key="rightArrowFileImageSource_UWP"
+            	File="Assets/RightArrow.png"
+            	/>
+
+            <FileImageSource x:Key="searchFileImageSource_iOS"
+            	File="Search.png"
+            	/>
+			<FileImageSource x:Key="searchFileImageSource_Android"
+            	File="Search.png"
+            	/>
+			<FileImageSource x:Key="searchFileImageSource_UWP"
+            	File="Assets/Search.png"
+            	/>
+
+            <FileImageSource x:Key="cameraFileImageSource_iOS"
+            	File="Camera.png"
+            	/>
+			<FileImageSource x:Key="cameraFileImageSource_Android"
+            	File="Camera.png"
+            	/>
+			<FileImageSource x:Key="cameraFileImageSource_UWP"
+            	File="Assets/Camera.png"
+            	/>
+
+            <FileImageSource x:Key="newFileImageSource_iOS"
+            	File="New.png"
+            	/>
+			<FileImageSource x:Key="newFileImageSource_Android"
+            	File="New.png"
+            	/>
+            <FileImageSource x:Key="newFileImageSource_UWP"
+            	File="Assets/New.png"
+            	/>
+
+            <FileImageSource x:Key="settingsFileImageSource_iOS"
+            	File="Settings.png"
+            	/>
+			<FileImageSource x:Key="settingsFileImageSource_Android"
+            	File="Settings.png"
+            	/>
+			<FileImageSource x:Key="settingsFileImageSource_UWP"
+            	File="Assets/Settings.png"
+            	/>
+
+            <x:Double x:Key="standardTextSizeiOS">18</x:Double>
+            <x:Double x:Key="standardTextSizeAndroid">18</x:Double>
+            <x:Double x:Key="standardTextSizeUWP">30</x:Double>
+
+            <x:Double x:Key="secondaryTextSizeiOS">14</x:Double>
+            <x:Double x:Key="secondaryTextSizeAndroid">14</x:Double>
+            <x:Double x:Key="secondaryTextSizeUWP">25</x:Double>
+
+            <x:Double x:Key="headingTextSizeiOS">20</x:Double>
+            <x:Double x:Key="headingTextSizeAndroid">20</x:Double>
+            <x:Double x:Key="headingTextSizeUWP">40</x:Double>
+
+            <x:Double x:Key="listTextSizeiOS">15</x:Double>
+            <x:Double x:Key="listTextSizeAndroid">15</x:Double>
+            <x:Double x:Key="listTextSizeUWP">20</x:Double>
+	    </ResourceDictionary>
+	</Application.Resources>
+</ContentPage>

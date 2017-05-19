@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://idat.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://idat.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://idat.com/">
+      <s:element name="InitialSetup">
+        <s:complexType />
+      </s:element>
+      <s:element name="InitialSetupResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idatRequest" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matrix" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeneficiaries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matrix" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBeneficiariesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBeneficiariesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayBeneficiaries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BeneficiaryPayments" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matrix" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayBeneficiariesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayBeneficiariesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveBeneficiary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BeneficiaryName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matrix" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveBeneficiaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoveBeneficiaryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBeneficiary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BeneficiaryObject" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Matrix" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBeneficiaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddBeneficiaryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InitialSetupSoapIn">
+    <wsdl:part name="parameters" element="tns:InitialSetup" />
+  </wsdl:message>
+  <wsdl:message name="InitialSetupSoapOut">
+    <wsdl:part name="parameters" element="tns:InitialSetupResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBeneficiariesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBeneficiaries" />
+  </wsdl:message>
+  <wsdl:message name="GetBeneficiariesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBeneficiariesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayBeneficiariesSoapIn">
+    <wsdl:part name="parameters" element="tns:PayBeneficiaries" />
+  </wsdl:message>
+  <wsdl:message name="PayBeneficiariesSoapOut">
+    <wsdl:part name="parameters" element="tns:PayBeneficiariesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveBeneficiarySoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveBeneficiary" />
+  </wsdl:message>
+  <wsdl:message name="RemoveBeneficiarySoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveBeneficiaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddBeneficiarySoapIn">
+    <wsdl:part name="parameters" element="tns:AddBeneficiary" />
+  </wsdl:message>
+  <wsdl:message name="AddBeneficiarySoapOut">
+    <wsdl:part name="parameters" element="tns:AddBeneficiaryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDATSoap">
+    <wsdl:operation name="InitialSetup">
+      <wsdl:input message="tns:InitialSetupSoapIn" />
+      <wsdl:output message="tns:InitialSetupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBeneficiaries">
+      <wsdl:input message="tns:GetBeneficiariesSoapIn" />
+      <wsdl:output message="tns:GetBeneficiariesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayBeneficiaries">
+      <wsdl:input message="tns:PayBeneficiariesSoapIn" />
+      <wsdl:output message="tns:PayBeneficiariesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBeneficiary">
+      <wsdl:input message="tns:RemoveBeneficiarySoapIn" />
+      <wsdl:output message="tns:RemoveBeneficiarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBeneficiary">
+      <wsdl:input message="tns:AddBeneficiarySoapIn" />
+      <wsdl:output message="tns:AddBeneficiarySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IDATSoap" type="tns:IDATSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InitialSetup">
+      <soap:operation soapAction="http://idat.com/InitialSetup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://idat.com/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeneficiaries">
+      <soap:operation soapAction="http://idat.com/GetBeneficiaries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayBeneficiaries">
+      <soap:operation soapAction="http://idat.com/PayBeneficiaries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBeneficiary">
+      <soap:operation soapAction="http://idat.com/RemoveBeneficiary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBeneficiary">
+      <soap:operation soapAction="http://idat.com/AddBeneficiary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="IDATSoap12" type="tns:IDATSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InitialSetup">
+      <soap12:operation soapAction="http://idat.com/InitialSetup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://idat.com/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBeneficiaries">
+      <soap12:operation soapAction="http://idat.com/GetBeneficiaries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayBeneficiaries">
+      <soap12:operation soapAction="http://idat.com/PayBeneficiaries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveBeneficiary">
+      <soap12:operation soapAction="http://idat.com/RemoveBeneficiary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBeneficiary">
+      <soap12:operation soapAction="http://idat.com/AddBeneficiary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IDAT">
+    <wsdl:port name="IDATSoap" binding="tns:IDATSoap">
+      <soap:address location="http://41.162.59.18/wsidat/IDAT.asmx" />
+    </wsdl:port>
+    <wsdl:port name="IDATSoap12" binding="tns:IDATSoap12">
+      <soap12:address location="http://41.162.59.18/wsidat/IDAT.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

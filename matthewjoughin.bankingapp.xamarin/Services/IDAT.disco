@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://41.162.59.18/wsidat/IDAT.asmx?wsdl" docRef="http://41.162.59.18/wsidat/IDAT.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://41.162.59.18/wsidat/IDAT.asmx" xmlns:q1="http://idat.com/" binding="q1:IDATSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://41.162.59.18/wsidat/IDAT.asmx" xmlns:q2="http://idat.com/" binding="q2:IDATSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{D719005F-62D0-41E2-B7CC-91846314BD18}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>matthewjoughin.bankingapp.xamarin</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ObservableRangeCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\OnPlatformExtended.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MessagingCenterAlert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Beneficiary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CloudDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MockDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BeneficiaryDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BeneficiarysViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BeneficiaryDetailPage.xaml.cs">
+      <DependentUpon>BeneficiaryDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BeneficiarysPage.xaml.cs">
+      <DependentUpon>BeneficiarysPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NewBeneficiaryPage.xaml.cs">
+      <DependentUpon>NewBeneficiaryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Security\AESEncryption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IKeyProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\MockKeyProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDataStore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Public.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ResourceLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StylesPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LogoutPage.xaml.cs">
+      <DependentUpon>LogoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LogoutViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IAESEncryptionProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BeneficiaryDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\BeneficiarysPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\NewBeneficiaryPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)StylesPage.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\LogoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Security\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+  </ItemGroup>
+</Project>
